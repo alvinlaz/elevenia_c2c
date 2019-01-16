@@ -1,0 +1,231 @@
+#project name, save this file as profiles.yml#
+name: 'elevenia_c2c'
+
+#project version#
+version: '0.0.1'
+
+#profile name (based in profiles.yml)#
+profile: elevenia
+
+#location for .sql files#
+source-paths: ["models"]
+
+#TABLE - START#
+#models:
+  #elevenia_c2c:
+    #enabled: true
+    #materialized: view
+    #materialized_table:
+      #enabled: true #if on, applied to all files in materialized_table#
+      #materialized: table
+      #ff_free_delivery_d:
+        #dist: even #redshift distribution style (even, all)#                 #must define for every file#
+        #unique_key: basic_dd #primary_key#                                   #must define for every file#
+        #sort: created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+#TABLE - END#
+
+#INCREMENTAL - START#
+models:
+  elevenia_c2c:
+    enabled: true
+    materialized: view
+    materialized_table:
+      enabled: true #if on, applied to all files in materialized_table#
+      materialized: view
+      #ff_free_delivery_d:
+        #dist: even #redshift distribution style (even, all)#                 #must define for every file#
+        #unique_key: basic_dd #primary_key#                                   #must define for every file#
+        #sort: created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+
+    transactions:
+      enabled: true
+      dd_member:
+        enabled: true
+        materialized: view
+
+      dd_tester:
+        enabled: true
+        materialized: view
+
+      dd_product:
+        enabled: true
+        materialized: view
+
+      dd_disp_ctgr:
+        enabled: true
+        materialized: view
+
+      sd_sales_dtls:
+        enabled: true
+        materialized: view
+
+      trx_list:
+        enabled: true
+        materialized: view
+
+      trx_list_md_sum:
+        enabled: true
+        materialized: view
+
+      trx_list_meta_sum:
+        enabled: true
+        materialized: view
+
+      trx_list_pulsa_sum:
+        enabled: true
+        materialized: view
+
+    incremental_table:
+      enabled: true #if on, applied to all files in materialized_table#
+      materialized: table
+      paid_trx_hourly:
+        enabled: true
+        materialized: view
+        sql_where: ord_stl_end_dt_hour_of_day > (select max(ord_stl_end_dt_hour_of_day) from {{ this }})
+        unique_key: ord_stl_end_dt_hour_of_day #primary_key#                                   #must define for every file#
+        sort: ord_stl_end_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: ord_stl_end_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#
+
+      ord_trx_hourly:
+        enabled: true
+        materialized: view
+        sql_where: ord_dt_hour_of_day > (select max(ord_dt_hour_of_day) from {{ this }})
+        unique_key: ord_dt_hour_of_day #primary_key#                                   #must define for every file#
+        sort: ord_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: ord_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#  
+
+      ord_no_hr:
+        enabled: true
+        materialized: view
+        description: This table contains daily delivered GMV
+        #sql_where: ord_dt_hour_of_day > (select max(ord_dt_hour_of_day) from {{ this }})
+        #unique_key: ord_dt_hour_of_day #primary_key#                                   #must define for every file#
+        #sort: ord_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        #dist: ord_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file# 
+
+      ord_no_hr_paid:
+        enabled: true
+        materialized: view
+        vars:
+          event_type: to_char(dateadd(hour,7,getdate()),'YYYYMMDDHH24')
+        #sql_where: ord_dt_hour_of_day > (select max(ord_dt_hour_of_day) from {{ this }})
+        #unique_key: ord_dt_hour_of_day #primary_key#                                   #must define for every file#
+        #sort: ord_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        #dist: ord_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#
+
+      sd_sales_dtls_mon_v:
+        enabled: true
+        materialized: view
+        #sql_where: ord_dt_hour_of_day > (select max(ord_dt_hour_of_day) from {{ this }})
+        #unique_key: ord_dt_hour_of_day #primary_key#                                   #must define for every file#
+        #sort: ord_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        #dist: ord_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#   
+
+      sessions:
+        enabled: true
+        materialized: incremental
+        sql_where: ord_dt_hour_of_day > (select max(ord_dt_hour_of_day) from {{ this }})
+        unique_key: ord_dt_hour_of_day #primary_key#                                   #must define for every file#
+        sort: ord_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: ord_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#  
+
+      sessions_paid:
+        enabled: true
+        materialized: incremental
+        sql_where: ord_stl_end_dt_hour_of_day > (select max(ord_stl_end_dt_hour_of_day) from {{ this }})
+        unique_key: ord_stl_end_dt_hour_of_day #primary_key#                                   #must define for every file#
+        sort: ord_stl_end_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: ord_stl_end_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#  
+
+      sessions_ord_test:
+        enabled: true
+        materialized: incremental
+        sql_where: ord_dt_hour_of_day > (select max(ord_dt_hour_of_day) from {{ this }})
+        unique_key: ord_dt_hour_of_day #primary_key#                                   #must define for every file#
+        sort: ord_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: ord_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#  
+
+      sessions_paid_test:
+        enabled: true
+        materialized: incremental
+        sql_where: ord_stl_end_dt_hour_of_day > (select max(ord_stl_end_dt_hour_of_day) from {{ this }})
+        unique_key: ord_stl_end_dt_hour_of_day #primary_key#                                   #must define for every file#
+        sort: ord_stl_end_dt_hour_of_day #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: ord_stl_end_dt_hour_of_day #redshift distribution style (even, all)#                 #must define for every file#  
+
+      sessions_dlv:
+        enabled: true
+        materialized: incremental
+        description: This table contains daily delivered GMV
+        sql_where: "basic_dd >= ( select max(basic_dd) from dbt_dev.sessions_dlv )"
+        unique_key: "basic_dd" #primary_key#                                   #must define for every file#
+        sort: "basic_dd" #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: "basic_dd" #redshift distribution style (even, all)#                 #must define for every file#  
+
+      sessions_ord_no_hr:
+        enabled: true
+        materialized: incremental
+        sql_where: ord_dy_conc_hr >= (select max(ord_dy_conc_hr) from dbt_dev.sessions_ord_no_hr)
+        unique_key: ord_dy_conc_hr
+        sort: ord_dy_conc_hr
+        #sql_where: ord_dy_conc_hr >= (select max(ord_dy_conc_hr) from {{ this }}) OR ISNULL(ord_stl_end_dy_conc_hr,'-') >= (select max(ISNULL(ord_stl_end_dy_conc_hr,'-')) from {{ this }}) OR ISNULL(pocnfrm_dy_conc_hr,'-') >= (select max(ISNULL(pocnfrm_dy_conc_hr,'-')) from {{ this }}) #OR en_ord_prd_stat_nm >= (select max(en_ord_prd_stat_nm) from {{ this }}) #ord_dy_conc_hr >= (select max(ord_dy_conc_hr) from {{ this }}) #ord_dt_date >= (select max(ord_dt_date) from {{ this }}) OR ord_dt_hr >= (select max(ord_dt_hr) from {{ this }})
+        #unique_key: ord_dy_conc_hr||ord_stl_end_dy_conc_hr||pocnfrm_dy_conc_hr||en_ord_prd_stat_nm #ord_dt_date||ord_dt_hr #primary_key#                                   #must define for every file#
+        #sort: [ord_dy_conc_hr, ord_stl_end_dy_conc_hr, pocnfrm_dy_conc_hr, en_ord_prd_stat_nm] #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: even #redshift distribution style (even, all)#                 #must define for every file#  
+
+      sd_sales_dtls_mon:
+        enabled: true
+        materialized: incremental
+        sql_where: "periods >= ( select max(periods) from dbt_dev.sd_sales_dtls_mon_v )"
+        unique_key: "periods" #primary_key#                                   #must define for every file#
+        sort: "periods" #created_dt #redshift sort column (interleaved, compound)#      #must define for every file#
+        dist: "periods" #redshift distribution style (even, all)#                 #must define for every file#  
+
+#INCREMENTAL - END#
+    archive:
+    - source_schema: dbt_dev         # schema to look for tables in (declared below)
+      target_schema: dbt_dev             # where to archive the data to
+      tables:                                # list of tables to archive
+        - source_table: sessions_dlv                # table to archive (production_data.users)
+          target_table: dlv_backup       # table to insert archived data into (dbt_archive.users_archived)
+          updated_at: updated_at             # used to determine when data has changed
+          unique_key: basic_dd                     # used to generate archival query
+
+        #source_table: some_other_table            # production_data.some_other_table
+        #target_table: some_other_table_archive   # dbt_archive.some_other_table_archive
+        #updated_at: "updatedAt"
+        #unique_key: "expressions || work || LOWER(too)"
+
+#models:
+#elevenia_c2c:
+        # Applies to all SQL files found under ./models/adwords/
+        #materialized_table:
+            #enabled: false
+            #materialized: table
+            # Applies to the specific model ./models/adwords/adwords_ads.sql
+            #ff_free_delivery_d:
+                #enabled: true
+                #materialized: table
+                #sort: load_dt
+                #unique_key: basic_dd
+                #sort_type: interleaved
+                #dist: basic_dd
+
+        # Applies to all SQL files found under ./models/snowplow/
+        #materialized_increment:
+            # Applies to all SQL files found under ./models/snowplow/base
+            #base:
+                # Applies to model ./models/snowplow/base/snowplow_events.sql
+                #snowplow_events:
+                    #materialized: table
+                    #sort: ['timestamp', 'userid']
+                    #sort_type: interleaved
+                    #dist: 'userid'
+
+            # Applies to model ./models/snowplow/snowplow_sessions.sql
+            #ff_free_delivery_d:
+                #materialized: incremental
+                #sql_where: "created_at > (select max(created_at) from {{ this }})"
+                #unique_key: "id"
+                #sort: "timestamp"
+                #dist: "user_id"

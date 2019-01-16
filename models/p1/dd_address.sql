@@ -1,0 +1,1 @@
+select *, dateadd(hour,7,getdate()) load_dt_v from dwuser.dd_address

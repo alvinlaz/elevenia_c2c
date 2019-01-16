@@ -1,0 +1,18 @@
+Instructions
+Edit files:
+Simply open the desired file and make the desired changes. When you're done, save your changes. You can either
+commit your changes of that file or edit another files.
+
+Commit (and push) using sourcetree:
+1. prepare the files.
+2. from the Unstaged files tab, select the file and click Stage Selected.
+3. from the Staged files tab, right click on the desired file and click Commit.
+4. enter the commit message. if you want to immediately push the committed files, click Push changes immediately to origin/dev
+5. click commit
+
+Pull:
+1. click the Pull button.
+2. in the Options section, tick 'Commit merged changes immediately'. then, click Ok.
+3. wait until the pull process is completed. if you want to see the details of this process, simply tick 'Show Full Output'
+to reveal the status of your pull process.
+4. when the process is completed, the status will display 'Completed successfully'. click 'Close' to close the pull window

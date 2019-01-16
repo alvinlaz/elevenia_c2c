@@ -1,0 +1,156 @@
+2018-12-17 08:30:33,632 (MainThread): Tracking: do not track
+2018-12-17 08:30:33,667 (MainThread): Loading dependency project from c:\users\alvinlaz\appdata\local\programs\python\python35\lib\site-packages\dbt\include
+2018-12-17 08:30:33,698 (MainThread): Loading dependency project from D:\project\elevenia_c2c\dbt_modules
+2018-12-17 08:30:33,747 (MainThread): Parsing macros\core.sql
+2018-12-17 08:30:33,801 (MainThread): Parsing macros\adapters\bigquery.sql
+2018-12-17 08:30:33,832 (MainThread): Parsing macros\adapters\common.sql
+2018-12-17 08:30:33,884 (MainThread): Parsing macros\adapters\redshift.sql
+2018-12-17 08:30:33,907 (MainThread): Parsing macros\adapters\snowflake.sql
+2018-12-17 08:30:33,921 (MainThread): Parsing macros\catalog\postgres_catalog.sql
+2018-12-17 08:30:33,963 (MainThread): Parsing macros\catalog\redshift_catalog.sql
+2018-12-17 08:30:34,001 (MainThread): Parsing macros\catalog\snowflake_catalog.sql
+2018-12-17 08:30:34,011 (MainThread): Parsing macros\etc\bigquery.sql
+2018-12-17 08:30:34,021 (MainThread): Parsing macros\etc\datetime.sql
+2018-12-17 08:30:34,048 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2018-12-17 08:30:34,062 (MainThread): Parsing macros\materializations\helpers.sql
+2018-12-17 08:30:34,090 (MainThread): Parsing macros\materializations\archive\archive.sql
+2018-12-17 08:30:34,168 (MainThread): Parsing macros\materializations\common\merge.sql
+2018-12-17 08:30:34,183 (MainThread): Parsing macros\materializations\incremental\bigquery_incremental.sql
+2018-12-17 08:30:34,203 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2018-12-17 08:30:34,247 (MainThread): Parsing macros\materializations\seed\bigquery.sql
+2018-12-17 08:30:34,262 (MainThread): Parsing macros\materializations\seed\seed.sql
+2018-12-17 08:30:34,307 (MainThread): Parsing macros\materializations\table\bigquery_table.sql
+2018-12-17 08:30:34,326 (MainThread): Parsing macros\materializations\table\snowflake_table.sql
+2018-12-17 08:30:34,339 (MainThread): Parsing macros\materializations\table\table.sql
+2018-12-17 08:30:34,357 (MainThread): Parsing macros\materializations\view\bq_snowflake_view.sql
+2018-12-17 08:30:34,383 (MainThread): Parsing macros\materializations\view\view.sql
+2018-12-17 08:30:34,408 (MainThread): Parsing macros\operations\catalog\get_catalog.sql
+2018-12-17 08:30:34,417 (MainThread): Parsing macros\operations\relations\get_relations.sql
+2018-12-17 08:30:34,426 (MainThread): Parsing macros\relations\postgres_relations.sql
+2018-12-17 08:30:34,437 (MainThread): Parsing macros\relations\redshift_relations.sql
+2018-12-17 08:30:34,449 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2018-12-17 08:30:34,460 (MainThread): Parsing macros\schema_tests\not_null.sql
+2018-12-17 08:30:34,471 (MainThread): Parsing macros\schema_tests\relationships.sql
+2018-12-17 08:30:34,483 (MainThread): Parsing macros\schema_tests\unique.sql
+2018-12-17 08:30:34,498 (MainThread): Parsing macros\core.sql
+2018-12-17 08:30:34,508 (MainThread): Parsing macros\adapters\bigquery.sql
+2018-12-17 08:30:34,518 (MainThread): Parsing macros\adapters\common.sql
+2018-12-17 08:30:34,540 (MainThread): Parsing macros\adapters\redshift.sql
+2018-12-17 08:30:34,552 (MainThread): Parsing macros\adapters\snowflake.sql
+2018-12-17 08:30:34,555 (MainThread): Parsing macros\catalog\postgres_catalog.sql
+2018-12-17 08:30:34,558 (MainThread): Parsing macros\catalog\redshift_catalog.sql
+2018-12-17 08:30:34,567 (MainThread): Parsing macros\catalog\snowflake_catalog.sql
+2018-12-17 08:30:34,569 (MainThread): Parsing macros\etc\bigquery.sql
+2018-12-17 08:30:34,570 (MainThread): Parsing macros\etc\datetime.sql
+2018-12-17 08:30:34,584 (MainThread): Parsing macros\etc\get_custom_schema.sql
+2018-12-17 08:30:34,588 (MainThread): Parsing macros\materializations\helpers.sql
+2018-12-17 08:30:34,597 (MainThread): Parsing macros\materializations\archive\archive.sql
+2018-12-17 08:30:34,638 (MainThread): Parsing macros\materializations\common\merge.sql
+2018-12-17 08:30:34,646 (MainThread): Parsing macros\materializations\incremental\bigquery_incremental.sql
+2018-12-17 08:30:34,658 (MainThread): Parsing macros\materializations\incremental\incremental.sql
+2018-12-17 08:30:34,678 (MainThread): Parsing macros\materializations\seed\bigquery.sql
+2018-12-17 08:30:34,682 (MainThread): Parsing macros\materializations\seed\seed.sql
+2018-12-17 08:30:34,709 (MainThread): Parsing macros\materializations\table\bigquery_table.sql
+2018-12-17 08:30:34,725 (MainThread): Parsing macros\materializations\table\snowflake_table.sql
+2018-12-17 08:30:34,743 (MainThread): Parsing macros\materializations\table\table.sql
+2018-12-17 08:30:34,760 (MainThread): Parsing macros\materializations\view\bq_snowflake_view.sql
+2018-12-17 08:30:34,775 (MainThread): Parsing macros\materializations\view\view.sql
+2018-12-17 08:30:34,789 (MainThread): Parsing macros\operations\catalog\get_catalog.sql
+2018-12-17 08:30:34,792 (MainThread): Parsing macros\operations\relations\get_relations.sql
+2018-12-17 08:30:34,794 (MainThread): Parsing macros\relations\postgres_relations.sql
+2018-12-17 08:30:34,797 (MainThread): Parsing macros\relations\redshift_relations.sql
+2018-12-17 08:30:34,799 (MainThread): Parsing macros\schema_tests\accepted_values.sql
+2018-12-17 08:30:34,802 (MainThread): Parsing macros\schema_tests\not_null.sql
+2018-12-17 08:30:34,804 (MainThread): Parsing macros\schema_tests\relationships.sql
+2018-12-17 08:30:34,807 (MainThread): Parsing macros\schema_tests\unique.sql
+2018-12-17 08:30:34,890 (MainThread): Parsing model.elevenia_c2c.xbi_1087_top_100
+2018-12-17 08:30:34,926 (MainThread): Parsing model.elevenia_c2c.ord_no_hr
+2018-12-17 08:30:34,952 (MainThread): Parsing model.elevenia_c2c.ord_no_hr_paid
+2018-12-17 08:30:34,982 (MainThread): Parsing model.elevenia_c2c.ord_trx_hourly
+2018-12-17 08:30:35,014 (MainThread): Parsing model.elevenia_c2c.paid_trx_hourly
+2018-12-17 08:30:35,049 (MainThread): Parsing model.elevenia_c2c.sd_sales_dtls_mon
+2018-12-17 08:30:35,076 (MainThread): On "<None>": cache miss for schema "dbt_dev", this is inefficient
+2018-12-17 08:30:35,077 (MainThread): Acquiring new redshift connection "master".
+2018-12-17 08:30:35,077 (MainThread): Opening a new connection (0 currently allocated)
+2018-12-17 08:30:35,078 (MainThread): Connecting to Redshift using 'database' credentials
+2018-12-17 08:30:36,327 (MainThread): Using redshift connection "master".
+2018-12-17 08:30:36,327 (MainThread): On master: select tablename as name, schemaname as schema, 'table' as type from pg_tables
+        where schemaname ilike 'dbt_dev'
+        union all
+        select viewname as name, schemaname as schema, 'view' as type from pg_views
+        where schemaname ilike 'dbt_dev'
+2018-12-17 08:30:36,446 (MainThread): SQL status: SELECT in 0.12 seconds
+2018-12-17 08:30:36,450 (MainThread): with schema=dbt_dev, model_name=None, relations=[<DefaultRelation "dbt_dev"."sd_sales_dtls_mon">, <DefaultRelation "dbt_dev"."sessions_dlv">, <DefaultRelation "dbt_dev"."sessions_ord_no_hr">, <DefaultRelation "dbt_dev"."sd_sales_dtls_mon_v">, <DefaultRelation "dbt_dev"."ff_free_delivery_d">, <DefaultRelation "dbt_dev"."ord_no_hr">]
+2018-12-17 08:30:36,453 (MainThread): Parsing model.elevenia_c2c.sd_sales_dtls_mon_v
+2018-12-17 08:30:36,475 (MainThread): Parsing model.elevenia_c2c.sessions
+2018-12-17 08:30:36,501 (MainThread): On "<None>": cache miss for schema "dbt_dev", this is inefficient
+2018-12-17 08:30:36,501 (MainThread): Using redshift connection "master".
+2018-12-17 08:30:36,501 (MainThread): On master: select tablename as name, schemaname as schema, 'table' as type from pg_tables
+        where schemaname ilike 'dbt_dev'
+        union all
+        select viewname as name, schemaname as schema, 'view' as type from pg_views
+        where schemaname ilike 'dbt_dev'
+2018-12-17 08:30:36,580 (MainThread): SQL status: SELECT in 0.08 seconds
+2018-12-17 08:30:36,583 (MainThread): with schema=dbt_dev, model_name=None, relations=[<DefaultRelation "dbt_dev"."sd_sales_dtls_mon">, <DefaultRelation "dbt_dev"."sessions_dlv">, <DefaultRelation "dbt_dev"."sessions_ord_no_hr">, <DefaultRelation "dbt_dev"."sd_sales_dtls_mon_v">, <DefaultRelation "dbt_dev"."ff_free_delivery_d">, <DefaultRelation "dbt_dev"."ord_no_hr">]
+2018-12-17 08:30:36,586 (MainThread): Parsing model.elevenia_c2c.sessions_dlv
+2018-12-17 08:30:36,615 (MainThread): On "<None>": cache miss for schema "dbt_dev", this is inefficient
+2018-12-17 08:30:36,615 (MainThread): Using redshift connection "master".
+2018-12-17 08:30:36,616 (MainThread): On master: select tablename as name, schemaname as schema, 'table' as type from pg_tables
+        where schemaname ilike 'dbt_dev'
+        union all
+        select viewname as name, schemaname as schema, 'view' as type from pg_views
+        where schemaname ilike 'dbt_dev'
+2018-12-17 08:30:36,697 (MainThread): SQL status: SELECT in 0.08 seconds
+2018-12-17 08:30:36,700 (MainThread): with schema=dbt_dev, model_name=None, relations=[<DefaultRelation "dbt_dev"."sd_sales_dtls_mon">, <DefaultRelation "dbt_dev"."sessions_dlv">, <DefaultRelation "dbt_dev"."sessions_ord_no_hr">, <DefaultRelation "dbt_dev"."sd_sales_dtls_mon_v">, <DefaultRelation "dbt_dev"."ff_free_delivery_d">, <DefaultRelation "dbt_dev"."ord_no_hr">]
+2018-12-17 08:30:36,703 (MainThread): Parsing model.elevenia_c2c.sessions_ord_no_hr
+2018-12-17 08:30:36,730 (MainThread): On "<None>": cache miss for schema "dbt_dev", this is inefficient
+2018-12-17 08:30:36,731 (MainThread): Using redshift connection "master".
+2018-12-17 08:30:36,731 (MainThread): On master: select tablename as name, schemaname as schema, 'table' as type from pg_tables
+        where schemaname ilike 'dbt_dev'
+        union all
+        select viewname as name, schemaname as schema, 'view' as type from pg_views
+        where schemaname ilike 'dbt_dev'
+2018-12-17 08:30:36,804 (MainThread): SQL status: SELECT in 0.07 seconds
+2018-12-17 08:30:36,807 (MainThread): with schema=dbt_dev, model_name=None, relations=[<DefaultRelation "dbt_dev"."sd_sales_dtls_mon">, <DefaultRelation "dbt_dev"."sessions_dlv">, <DefaultRelation "dbt_dev"."sessions_ord_no_hr">, <DefaultRelation "dbt_dev"."sd_sales_dtls_mon_v">, <DefaultRelation "dbt_dev"."ff_free_delivery_d">, <DefaultRelation "dbt_dev"."ord_no_hr">]
+2018-12-17 08:30:36,811 (MainThread): Parsing model.elevenia_c2c.sessions_ord_test
+2018-12-17 08:30:36,850 (MainThread): On "<None>": cache miss for schema "dbt_dev", this is inefficient
+2018-12-17 08:30:36,851 (MainThread): Using redshift connection "master".
+2018-12-17 08:30:36,851 (MainThread): On master: select tablename as name, schemaname as schema, 'table' as type from pg_tables
+        where schemaname ilike 'dbt_dev'
+        union all
+        select viewname as name, schemaname as schema, 'view' as type from pg_views
+        where schemaname ilike 'dbt_dev'
+2018-12-17 08:30:36,932 (MainThread): SQL status: SELECT in 0.08 seconds
+2018-12-17 08:30:36,938 (MainThread): with schema=dbt_dev, model_name=None, relations=[<DefaultRelation "dbt_dev"."sd_sales_dtls_mon">, <DefaultRelation "dbt_dev"."sessions_dlv">, <DefaultRelation "dbt_dev"."sessions_ord_no_hr">, <DefaultRelation "dbt_dev"."sd_sales_dtls_mon_v">, <DefaultRelation "dbt_dev"."ff_free_delivery_d">, <DefaultRelation "dbt_dev"."ord_no_hr">]
+2018-12-17 08:30:36,943 (MainThread): Parsing model.elevenia_c2c.sessions_paid
+2018-12-17 08:30:36,982 (MainThread): On "<None>": cache miss for schema "dbt_dev", this is inefficient
+2018-12-17 08:30:36,982 (MainThread): Using redshift connection "master".
+2018-12-17 08:30:36,982 (MainThread): On master: select tablename as name, schemaname as schema, 'table' as type from pg_tables
+        where schemaname ilike 'dbt_dev'
+        union all
+        select viewname as name, schemaname as schema, 'view' as type from pg_views
+        where schemaname ilike 'dbt_dev'
+2018-12-17 08:30:37,056 (MainThread): SQL status: SELECT in 0.07 seconds
+2018-12-17 08:30:37,063 (MainThread): with schema=dbt_dev, model_name=None, relations=[<DefaultRelation "dbt_dev"."sd_sales_dtls_mon">, <DefaultRelation "dbt_dev"."sessions_dlv">, <DefaultRelation "dbt_dev"."sessions_ord_no_hr">, <DefaultRelation "dbt_dev"."sd_sales_dtls_mon_v">, <DefaultRelation "dbt_dev"."ff_free_delivery_d">, <DefaultRelation "dbt_dev"."ord_no_hr">]
+2018-12-17 08:30:37,068 (MainThread): Parsing model.elevenia_c2c.sessions_paid_test
+2018-12-17 08:30:37,105 (MainThread): On "<None>": cache miss for schema "dbt_dev", this is inefficient
+2018-12-17 08:30:37,105 (MainThread): Using redshift connection "master".
+2018-12-17 08:30:37,106 (MainThread): On master: select tablename as name, schemaname as schema, 'table' as type from pg_tables
+        where schemaname ilike 'dbt_dev'
+        union all
+        select viewname as name, schemaname as schema, 'view' as type from pg_views
+        where schemaname ilike 'dbt_dev'
+2018-12-17 08:30:37,190 (MainThread): SQL status: SELECT in 0.08 seconds
+2018-12-17 08:30:37,196 (MainThread): with schema=dbt_dev, model_name=None, relations=[<DefaultRelation "dbt_dev"."sd_sales_dtls_mon">, <DefaultRelation "dbt_dev"."sessions_dlv">, <DefaultRelation "dbt_dev"."sessions_ord_no_hr">, <DefaultRelation "dbt_dev"."sd_sales_dtls_mon_v">, <DefaultRelation "dbt_dev"."ff_free_delivery_d">, <DefaultRelation "dbt_dev"."ord_no_hr">]
+2018-12-17 08:30:37,202 (MainThread): Parsing model.elevenia_c2c.ff_free_delivery_d
+2018-12-17 08:30:37,252 (MainThread): Parsing model.elevenia_c2c.dd_address
+2018-12-17 08:30:37,282 (MainThread): Parsing model.elevenia_c2c.dd_address_v2
+2018-12-17 08:30:37,308 (MainThread): Parsing model.elevenia_c2c.dd_address_v3
+2018-12-17 08:30:37,333 (MainThread): Parsing model.elevenia_c2c.dd_disp_ctgr
+2018-12-17 08:30:37,356 (MainThread): Parsing model.elevenia_c2c.rangga_test
+2018-12-17 08:30:37,442 (MainThread): Found 0 archives, 2 operations, 19 models, 94 macros, 0 seed files, 0 analyses, 0 tests
+2018-12-17 08:30:37,443 (MainThread): * Spec='incremental_table.ff_free_delivery_d' does not identify any models and was ignored
+
+2018-12-17 08:30:37,444 (MainThread): WARNING: Nothing to do. Try checking your model configs and model specification args
+2018-12-17 08:30:37,445 (MainThread): 08:30:37 | Done.
+2018-12-17 08:30:37,445 (MainThread): Flushing usage events
